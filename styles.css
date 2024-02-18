@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --title-text-color: #F3F4FC;
+    --main-background: rgb(57, 73, 171);
+    --container-borders: #E6E9FA;
+    --picture-div-color: rgba(0,0,128,0.1);
+    --ellipse-color: rgba(0, 34, 123, 1);
+    --welcome-word-clr: #343434;
+    --input-borders-clr: #D0D0D0;
+    --placeholder-clr: #828282;
+    --forgot-pass-clr: #6F74DD;
+    --main-btn-clr: rgb(51, 65, 166);
+}
+
+body{
+    min-height: 100vh;
+    background: var(--main-background);
+    font-family: "Open Sans", serif;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+}
+
+
+h1 {
+    font-family: "Open Sans", serif;
+    font-size: 76px;
+    font-weight: 600;
+    color: var(--title-text-color);
+    text-shadow: 0 4px 4px rgba(0,0,0,25%);
+    text-align: center;
+    padding: 50px 0 50px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 1218px;
+    height: 743px;
+    border-radius: 24px;
+    display: flex;
+}
+
+.picture-div {
+    background: var(--picture-div-color);
+    width: 732px;
+    height: 100%;
+    border-radius: 24px 0 0 24px;
+    border-left: 1px solid var(--container-borders);
+    border-top: 1px solid var(--container-borders);
+    /* box-shadow: 0px 48px 48px -6px rgba(23, 50, 142, 1); */
+}
+
+.registration-form {
+    background: #fff;
+    height: 100%;
+    width: 486px;
+    border-radius: 0 24px 0 0;
+}
+
+.welcome-paragraph {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 33px;
+}
+
+.welcome-paragraph2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.order-div {
+    display:flex;
+    flex-direction: column;
+    padding: 68px;
+}
+
+p {
+    
+    align-self: center;
+}
+
+.astronaut {
+    align-self: center;
+    margin-top: 73px;
+}
+
+h2 {
+    color: var(--welcome-word-clr);
+    font-size: 24px;
+    font-weight: 600;
+    margin: 50px 0 50px 0;
+}
+
+input {
+    display: block;
+    width: 358px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--input-borders-clr);
+    margin-bottom: 16px;
+    padding-left: 15px;
+}
+
+#email, #pass, #nickName, #phoneNumber { 
+    padding-left: 40px;
+}
+
+
+
+::placeholder {
+    font-family: "Open Sans", serif;
+    font-size: 14px;
+    color: var(--placeholder-clr);
+}
+
+span {
+    font-size: 14px;
+    color: var(--placeholder-clr);
+}
+
+.divide {
+    position: relative;
+    margin: 8px 0 8px 0;
+}
+
+.divide::before {
+    display: block;
+    content: '';
+    width: 93px;
+    height: 1px;
+    background: var(--container-borders);
+    left: 25px;
+    top: 50%;
+    position: absolute;
+}
+
+.divide::after {
+    display: block;
+    content: '';
+    width: 93px;
+    height: 1px;
+    background: var(--container-borders);
+    right: 25px;
+    top: 50%;
+    position: absolute;
+}
+
+button {
+    display: block;
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-container {
+    display: flex;
+    min-width: 358px;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.btn-container > button {
+    width: 175px;
+    height: 40px;
+    border-radius: 40px;
+    border: 1px solid var(--main-btn-clr);
+    color: var(--main-btn-clr);
+    font-size: 14px;
+    font-family: "Open Sans", serif;
+    text-align: left;
+    padding-left: 80px;
+}
+
+.ggl, .git {
+    position: absolute;
+    top: 8px;
+}
+
+.ggl {
+    left: 48px;
+}
+
+.git {
+    right: 101px;
+}
+
+.flex-container-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form > div {
+    position: relative;
+    width: 358px;
+}
+
+form > div > svg {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.showPass {
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    position: absolute;
+    top: 13px;
+    right: 11px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Open Sans", serif;
+    color: var(--forgot-pass-clr);
+    font-size: 14px;
+}
+
+.forgot_pass_container {
+    width: 358px;
+    text-align: right;
+    margin-bottom: 32px;
+}
+
+.create-acc-btn, .log-in-btn {
+    width: 358px;
+    height: 40px;
+    border-radius: 40px;
+}
+
+.log-in-btn {
+    border-radius: 40px;
+    border: 1px solid var(--main-btn-clr);
+    color: var(--main-btn-clr);
+    font-size: 14px;
+    font-family: "Open Sans", serif;
+    margin-top: 16px;
+}
+
+.create-acc-btn {
+    background: var(--main-btn-clr);
+    font-family: "Open Sans", serif;
+    color: #fff;
+    font-size: 14px;
+}
+
+/*https://www.figma.com/community/file/1014530649529807522*/
+/* https://css-tricks.com/css-only-carousel/ */
+/*Добавить имя дизайнера, изменить цвет фокуса?*/
