@@ -17,53 +17,71 @@
     --main-btn-clr: rgb(51, 65, 166);
 }
 
+body, 
+h1,
+input, 
+::placeholder, 
+button, 
+a, 
+h6 {
+    font-family: "Open Sans", serif;
+}
+
+
 body{
+    min-width: 1251px;
     min-height: 100vh;
     background: var(--main-background);
-    font-family: "Open Sans", serif;
     overflow: hidden;
     backdrop-filter: blur(20px);
+    flex-grow: 1;
 }
 
 
 h1 {
-    font-family: "Open Sans", serif;
     font-size: 76px;
     font-weight: 600;
     color: var(--title-text-color);
     text-shadow: 0 4px 4px rgba(0,0,0,25%);
     text-align: center;
-    padding: 50px 0 50px 0;
+    padding: 30px 0 30px 0;
+    width: inherit;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    min-height: 100vh;
 }
 
 .form {
-    width: 1218px;
+    min-width: 1218px;
     height: 743px;
     border-radius: 24px;
     display: flex;
+    justify-content: center;
 }
 
 .picture-div {
-    background: var(--picture-div-color);
     width: 732px;
     height: 100%;
+
+    background: var(--picture-div-color);
+
     border-radius: 24px 0 0 24px;
     border-left: 1px solid var(--container-borders);
+    border-bottom: 1px solid var(--container-borders);
     border-top: 1px solid var(--container-borders);
-    /* box-shadow: 0px 48px 48px -6px rgba(23, 50, 142, 1); */
 }
 
 .registration-form {
     background: #fff;
     height: 100%;
     width: 486px;
-    border-radius: 0 24px 0 0;
+    border-radius: 0 24px 24px 0;
 }
 
 .welcome-paragraph {
@@ -105,22 +123,29 @@ h2 {
 
 input {
     display: block;
+
     width: 358px;
     height: 40px;
+    margin-bottom: 14px;
+
+    padding-left: 15px;
+
     border-radius: 8px;
     border: 1px solid var(--input-borders-clr);
-    margin-bottom: 16px;
-    padding-left: 15px;
+    caret-color: var(--forgot-pass-clr);
+  
 }
 
-#email, #pass, #nickName, #phoneNumber { 
+#email, 
+#pass, 
+#nickName, 
+#phoneNumber { 
     padding-left: 40px;
 }
 
 
 
 ::placeholder {
-    font-family: "Open Sans", serif;
     font-size: 14px;
     color: var(--placeholder-clr);
 }
@@ -135,23 +160,23 @@ span {
     margin: 8px 0 8px 0;
 }
 
-.divide::before {
-    display: block;
-    content: '';
-    width: 93px;
-    height: 1px;
-    background: var(--container-borders);
-    left: 25px;
-    top: 50%;
-    position: absolute;
-}
-
+.divide::before,
 .divide::after {
     display: block;
     content: '';
     width: 93px;
     height: 1px;
     background: var(--container-borders);
+   
+}
+
+.divide::before {
+    left: 25px;
+    top: 50%;
+    position: absolute;
+}
+
+.divide::after {
     right: 25px;
     top: 50%;
     position: absolute;
@@ -163,6 +188,7 @@ button {
     background-color: transparent;
     padding: 0;
     cursor: pointer;
+    
 }
 
 .btn-container {
@@ -174,18 +200,22 @@ button {
 }
 
 .btn-container > button {
-    width: 175px;
+    min-width: 175px;
     height: 40px;
+
+    padding-left: 80px;
+    text-align: left;
+
     border-radius: 40px;
     border: 1px solid var(--main-btn-clr);
+
     color: var(--main-btn-clr);
+
     font-size: 14px;
-    font-family: "Open Sans", serif;
-    text-align: left;
-    padding-left: 80px;
 }
 
-.ggl, .git {
+.ggl, 
+.git {
     position: absolute;
     top: 8px;
 }
@@ -217,18 +247,21 @@ form > div > svg {
 }
 
 .showPass {
-    border: 0;
-    background-color: transparent;
-    padding: 0;
     position: absolute;
+
     top: 13px;
     right: 11px;
+
+    padding: 0;
+    
+    border: 0;
+    background-color: transparent;
+    
     cursor: pointer;
 }
 
 a {
     text-decoration: none;
-    font-family: "Open Sans", serif;
     color: var(--forgot-pass-clr);
     font-size: 14px;
 }
@@ -239,7 +272,8 @@ a {
     margin-bottom: 32px;
 }
 
-.create-acc-btn, .log-in-btn {
+.create-acc-btn, 
+.log-in-btn {
     width: 358px;
     height: 40px;
     border-radius: 40px;
@@ -250,17 +284,288 @@ a {
     border: 1px solid var(--main-btn-clr);
     color: var(--main-btn-clr);
     font-size: 14px;
-    font-family: "Open Sans", serif;
     margin-top: 16px;
 }
 
 .create-acc-btn {
     background: var(--main-btn-clr);
-    font-family: "Open Sans", serif;
     color: #fff;
     font-size: 14px;
 }
 
-/*https://www.figma.com/community/file/1014530649529807522*/
-/* https://css-tricks.com/css-only-carousel/ */
-/*Добавить имя дизайнера, изменить цвет фокуса?*/
+input:focus {
+    outline: none;
+    border: 2px solid var(--forgot-pass-clr);
+}
+
+input + p {
+    visibility: hidden;
+    position: absolute;
+
+    padding: 2px 0;
+    text-align: center;
+    /* margin-bottom: 16px; */
+
+    min-width: 40%;
+    top: 10px;
+    left: 450px;  
+
+    font-size: 12px;
+    color: rgb(211, 32, 19);
+    font-weight: 700;
+
+    background: rgb(221, 232, 255);
+
+    border-radius: 20px;
+    border: 1px solid rgb(75, 126, 255);
+
+    animation-duration: 0.4s;
+    animation-name: errorAnimation;
+}
+
+h6 {
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+h6 > a {
+    color:rgb(223, 6, 93);
+}
+
+h6 > a:hover {
+
+    text-decoration: underline #fff;
+}
+
+@keyframes errorAnimation {
+    from {
+        transform: scale(0.2);
+    }
+}
+
+/*
+Error display on resized screen
+*/
+@media (max-width: 1502px) {
+    input + p {
+        min-width: auto;
+        padding: 2px 8px;
+        border: none;
+        background-color: rgb(247, 189, 189);
+        font-size: 10px;
+        
+        top: 11px;
+        left: 265px;
+    } 
+
+    input + .error_phone_number {
+        left: 220px;
+    }
+
+    input {
+        margin-bottom: 14px;
+    }
+}
+
+/*
+Media for PC screens
+*/
+
+@media (max-width: 1240px) {
+    body {
+        min-width: 768px;
+    }
+    .registration-form {
+        max-width: 450px;
+    }
+    .picture-div {
+        max-width: 500px;
+    }
+
+    input + p {
+        min-width: auto;
+        padding: 2px 8px;
+        border: none;
+        background-color: rgb(247, 189, 189);
+        font-size: 10px;
+        
+        top: 11px;
+        left: 265px;
+    } 
+
+    input + .error_phone_number {
+        left: 220px;
+    }
+
+    input {
+        margin-bottom: 14px;
+    }
+}
+
+/*
+Media for tablets
+*/
+@media (max-width: 956px) {
+    body {
+        min-width: 768px;
+    }
+    .registration-form {
+        max-width: 380px;
+    }
+    .welcome-paragraph {
+        font-size: 18px;
+    }
+    .picture-div {
+        max-width: 380px;
+    }
+    .log-in-btn {
+        margin-bottom: 35px;
+     }
+ 
+     ::placeholder, 
+     span,
+     a, 
+     button, 
+     .welcome-paragraph2, 
+     .create-acc-btn,
+     .btn-container > button, 
+     .log-in-btn{
+         font-size: 12px;
+     }
+ 
+     .user-form {
+         width:300px;
+     }
+ 
+     input, 
+     .forgot_pass_container,
+     .create-acc-btn, 
+     .log-in-btn {
+         width: 300px;
+     }
+ 
+     .showPass {
+         right: 65px;
+     }
+
+     input + p {
+        min-width: auto;
+        padding: 2px 8px;
+        border: none;
+        background-color: rgb(247, 189, 189);
+        font-size: 10px;
+        
+        top: 11px;
+        left: 210px;
+    } 
+
+    input + .error_phone_number {
+        left: 165px;
+    }
+
+    input {
+        margin-bottom: 14px;
+    }
+}
+
+/*
+Media for smartphones
+*/
+@media (max-width: 764px) {
+    body {
+        min-width: 380px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .container {
+        height: 300px;
+        justify-content:flex-start;
+    }
+
+    .form {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    .picture-div {
+        border-radius: 24px 24px 0 0;
+        border: 1px solid white;
+        height: 600px;
+    }
+
+    .registration-form {
+        border-radius: 0 0 24px 24px;
+    }
+
+    h2 {
+        margin: 30px 0 30px 0;
+        font-size: 18px;
+    }
+
+    .log-in-btn {
+       margin-bottom: 35px;
+    }
+
+    ::placeholder, 
+    span,
+    a, 
+    button, 
+    .welcome-paragraph2, 
+    .create-acc-btn,
+    .btn-container > button, 
+    .log-in-btn{
+        font-size: 12px;
+    }
+
+    .user-form {
+        width:300px;
+    }
+
+    input, 
+    .forgot_pass_container,
+    .create-acc-btn, .log-in-btn {
+        width: 300px;
+    }
+
+    .showPass {
+        right: 65px;
+    }
+
+    h6, 
+    h6 > a {
+        margin-bottom: 20px;
+        font-size: 0.7rem;
+    }
+
+    .order-div {
+        padding: 50px;
+    }
+
+    input + p {
+        /* position: static; */
+        min-width: auto;
+        padding: 2px 8px;
+        border: none;
+        background-color: rgb(247, 189, 189);
+        font-size: 10px;
+        
+        top: 11px;
+        left: 210px;
+    } 
+
+    input + .error_phone_number {
+        left: 165px;
+    }
+
+    input {
+        margin-bottom: 14px;
+    }
+}
