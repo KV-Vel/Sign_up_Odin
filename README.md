@@ -9,5 +9,6 @@ Sign up form for Odin curriculum.
   <li>CSS</li>
   <li>JS</li>
 </ul>
+
 # Links
 Design by <a href="https://www.figma.com/community/file/1014530649529807522">Sergey Nadezhin</a>
