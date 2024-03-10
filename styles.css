@@ -573,7 +573,7 @@ Media for smartphones
     }
 
     .picture-div, .registration-form, .container {
-        width: 370px;
+        width: 350px;
     }
 
     form > div {
@@ -588,4 +588,23 @@ Media for smartphones
     .showPass {
         right: 15px;
     }
+
+    .btn-container > button {
+        width: 120px;
+        padding-left: 25px;
+        text-align: center;
+    }
+
+    .btn-container {
+        justify-content: space-around;
+    }
+
+    .ggl {
+        left: 45px;
+    }
+    
+    .git {
+        right: 108px;
+    }
+
 }
