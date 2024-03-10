@@ -569,22 +569,21 @@ Media for smartphones
 
     body {
         overflow-x: hidden;
-       
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .picture-div {
+    .picture-div, .registration-form {
         width: 365px;
     }
 
-    .registration-form {
-        width: 365px;
-    }
+  
 
     form > div {
         position: relative;
         width: 300px;
     }
-
     
     input + p {
         left: 210px;
