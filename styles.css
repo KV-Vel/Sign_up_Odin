@@ -29,7 +29,8 @@ h6 {
 
 
 body{
-    min-width: 1251px;
+    /* min-width: 1251px; */
+    /* min-width: 768px; */
     min-height: 100vh;
     background: var(--main-background);
     overflow: hidden;
@@ -58,7 +59,7 @@ h1 {
 }
 
 .form {
-    min-width: 1218px;
+    /* min-width: 1218px; */
     height: 743px;
     border-radius: 24px;
     display: flex;
@@ -348,7 +349,7 @@ h6 > a:hover {
 /*
 Error display on resized screen
 */
-@media (max-width: 1502px) {
+@media (max-width: 1559px) {
     input + p {
         min-width: auto;
         padding: 2px 8px;
@@ -373,15 +374,15 @@ Error display on resized screen
 Media for PC screens
 */
 
-@media (max-width: 1240px) {
-    body {
+@media (max-width: 1252px) {
+    /* body {
         min-width: 768px;
-    }
+    } */
     .registration-form {
-        max-width: 450px;
+        width: 450px;
     }
     .picture-div {
-        max-width: 500px;
+        width: 500px;
     }
 
     input + p {
@@ -408,17 +409,15 @@ Media for PC screens
 Media for tablets
 */
 @media (max-width: 956px) {
-    body {
-        min-width: 768px;
-    }
+   
     .registration-form {
-        max-width: 380px;
+        width: 380px;
     }
     .welcome-paragraph {
         font-size: 18px;
     }
     .picture-div {
-        max-width: 380px;
+        width: 380px;
     }
     .log-in-btn {
         margin-bottom: 35px;
@@ -473,9 +472,12 @@ Media for tablets
 /*
 Media for smartphones
 */
-@media (max-width: 764px) {
+@media (max-width: 794px) {
     body {
-        min-width: 380px;
+        /* min-width: 100px; */
+        /* width: 500px; */
+        min-width: 370px;
+        
         overflow-x: hidden;
         overflow-y: auto;
     }
@@ -499,10 +501,12 @@ Media for smartphones
         border-radius: 24px 24px 0 0;
         border: 1px solid white;
         height: 600px;
+        width: 400px;
     }
 
     .registration-form {
         border-radius: 0 0 24px 24px;
+        width: 400px;
     }
 
     h2 {
@@ -567,5 +571,11 @@ Media for smartphones
 
     input {
         margin-bottom: 14px;
+    }
+}
+
+@media (max-width: 421px) {
+    body {
+        width: 410px;
     }
 }
