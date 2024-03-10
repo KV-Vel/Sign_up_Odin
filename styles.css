@@ -198,7 +198,7 @@ button {
 }
 
 .btn-container > button {
-    min-width: 175px;
+    width: 175px;
     height: 40px;
 
     padding-left: 80px;
@@ -303,7 +303,7 @@ input + p {
     padding: 2px 0;
     text-align: center;
 
-    min-width: 40%;
+    width: 40%;
     top: 10px;
     left: 450px;  
 
@@ -347,7 +347,7 @@ Error display on resized screen
 */
 @media (max-width: 1559px) {
     input + p {
-        min-width: auto;
+        width: auto;
         padding: 2px 8px;
         border: none;
         background-color: rgb(247, 189, 189);
@@ -379,7 +379,7 @@ Media for PC screens
     }
 
     input + p {
-        min-width: auto;
+        width: auto;
         padding: 2px 8px;
         border: none;
         background-color: rgb(247, 189, 189);
@@ -443,7 +443,7 @@ Media for tablets
      }
 
      input + p {
-        min-width: auto;
+        width: auto;
         padding: 2px 8px;
         border: none;
         background-color: rgb(247, 189, 189);
@@ -467,8 +467,6 @@ Media for smartphones
 */
 @media (max-width: 794px) {
     body {
-        /* min-width: 370px; */
-        
         overflow-x: hidden;
         overflow-y: auto;
     }
@@ -546,7 +544,7 @@ Media for smartphones
 
     input + p {
         /* position: static; */
-        min-width: auto;
+        width: auto;
         padding: 2px 8px;
         border: none;
         background-color: rgb(247, 189, 189);
@@ -574,11 +572,9 @@ Media for smartphones
         align-items: center;
     }
 
-    .picture-div, .registration-form {
-        width: 365px;
+    .picture-div, .registration-form, .container {
+        width: 370px;
     }
-
-  
 
     form > div {
         position: relative;
