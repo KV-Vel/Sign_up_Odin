@@ -29,8 +29,6 @@ h6 {
 
 
 body{
-    /* min-width: 1251px; */
-    /* min-width: 768px; */
     min-height: 100vh;
     background: var(--main-background);
     overflow: hidden;
@@ -59,7 +57,6 @@ h1 {
 }
 
 .form {
-    /* min-width: 1218px; */
     height: 743px;
     border-radius: 24px;
     display: flex;
@@ -305,7 +302,6 @@ input + p {
 
     padding: 2px 0;
     text-align: center;
-    /* margin-bottom: 16px; */
 
     min-width: 40%;
     top: 10px;
@@ -375,9 +371,6 @@ Media for PC screens
 */
 
 @media (max-width: 1252px) {
-    /* body {
-        min-width: 768px;
-    } */
     .registration-form {
         width: 450px;
     }
@@ -474,8 +467,6 @@ Media for smartphones
 */
 @media (max-width: 794px) {
     body {
-        /* min-width: 100px; */
-        /* width: 500px; */
         min-width: 370px;
         
         overflow-x: hidden;
@@ -575,7 +566,26 @@ Media for smartphones
 }
 
 @media (max-width: 421px) {
-    body {
-        width: 410px;
+
+    .picture-div {
+        width: 375px;
+    }
+
+    .registration-form {
+        width: 375px;
+    }
+
+    form > div {
+        position: relative;
+        width: 300px;
+    }
+
+    
+    input + p {
+        left: 210px;
+    } 
+
+    .showPass {
+        right: 15px;
     }
 }
