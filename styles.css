@@ -52,7 +52,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    /* width: 100%; */
     min-height: 100vh;
 }
 
@@ -467,7 +467,7 @@ Media for smartphones
 */
 @media (max-width: 794px) {
     body {
-        min-width: 370px;
+        /* min-width: 370px; */
         
         overflow-x: hidden;
         overflow-y: auto;
@@ -569,6 +569,7 @@ Media for smartphones
 
     body {
         overflow-x: hidden;
+       
     }
 
     .picture-div {
