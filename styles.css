@@ -567,6 +567,10 @@ Media for smartphones
 
 @media (max-width: 421px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
     .picture-div {
         width: 375px;
     }
